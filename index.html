@@ -35,24 +35,51 @@
 
   <!-- WhatsApp sticky button styles -->
   <style>
+    .sticky-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .whatsapp-button {
+          padding: 3px 3px;
+          background-color: #25D366; /* WhatsApp green color */
+          color: white;
+          border: none;
+          border-radius: 9px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+      }
     .whatsapp-button:hover {
-                  background-color: #20b357;
-            }
+      background-color: #25D366;
+    }
     .hover-message {
-                  display: none;
-                  margin-left: 10px;
-                  /* Adjust the margin as needed */
-                  background-color: #20b357;
-                  color: #fff;
-                  padding: 5px;
-                  border-radius: 3px;
-                  font-size: 14px;
-                  white-space: nowrap;
-            }
-    .whatsapp-container:hover .hover-message {
-                  display: block;
-            }
-            
+      display: none;
+      position: absolute;
+      right: 120%;
+      cursor: pointer;
+      /* Adjust the margin as needed */
+      background-color: #25D366;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .icon-bar {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hover-message a {
+            color: #fff;
+            text-decoration: none;
+        }
+    .icon-bar:hover .hover-message,
+    .icon-bar .hover-message:hover {
+      display: block;
+    }
   </style>
 
 </head>
@@ -70,13 +97,6 @@
       </div>
     </div>
   
-    <!-- WhatsApp sticky button -->
-    <div class="icon-bar">
-      <a href="https://wa.me/0742782395?text=Hello%20there!%20Welcome%20to%20Zendawa.%20How%20can%20we%20assist%20you%20today?%3F" target="_blank" class="whatsapp-button">
-        <img src="assets/images/social.png" alt="WhatsApp" style="width: 50px; height: auto;">
-      </a>
-      <div class="hover-message">WhatsApp us</div>
-    </div>
   
 
     <div class="header-top" data-header>
@@ -280,6 +300,19 @@
       </section>
 
 
+      <!-- WhatsApp sticky button -->
+      <div class="sticky-button">
+        <div class="icon-bar">
+          <a href="https://wa.me/0742782395?text=Hello%20there!%20Welcome%20to%20Zendawa.%20How%20can%20we%20assist%20you%20today?%3F"
+            target="_blank" class="whatsapp-button">
+            <img src="assets/images/social.png" alt="WhatsApp" style="width: 50px; height: auto;">
+          </a>
+          <div class="hover-message">
+            <a href="https://wa.me/0742782395?text=Hello%20there!%20Welcome%20to%20Zendawa.%20How%20can%20we%20assist%20you%20today?%3F"
+              target="_blank">WhatsApp us</a>
+          </div>
+        </div>
+      </div>
 
 
 
