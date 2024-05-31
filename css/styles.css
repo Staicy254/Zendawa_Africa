@@ -1238,3 +1238,16 @@ h4 {
     row-gap: 2rem;
   }
 }
+/* CSS for WhatsApp sticky button */
+.icon-bar{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-bar {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 9999; /* Ensure it's above other content */
+}
+
