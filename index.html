@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Zendawa Africa</title>
+  <script type="text/javascript" src="add.js"></script>
 
   <!-- 
     - favicon
@@ -33,6 +34,58 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg">
 
+  <!-- javascript -->
+   <script src="products.js" defer async></script>
+
+  <!-- WhatsApp sticky button styles -->
+  <style>
+    .sticky-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .whatsapp-button {
+          padding: 3px 3px;
+          background-color: #25D366; /* WhatsApp green color */
+          color: white;
+          border: none;
+          border-radius: 9px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+      }
+    .whatsapp-button:hover {
+      background-color: #25D366;
+    }
+    .hover-message {
+      display: none;
+      position: absolute;
+      right: 120%;
+      cursor: pointer;
+      /* Adjust the margin as needed */
+      background-color: #25D366;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .icon-bar {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hover-message a {
+            color: #fff;
+            text-decoration: none;
+        }
+    .icon-bar:hover .hover-message,
+    .icon-bar .hover-message:hover {
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body id="top">
@@ -48,12 +101,6 @@
       </div>
     </div>
   
-    <!-- WhatsApp sticky button -->
-    <div class="icon-bar">
-      <a href="#" target="_blank">
-        <img src="assets/images/social.png" alt="WhatsApp" style="width: 50px; height: auto;">
-      </a>
-    </div>
   
 
     <div class="header-top" data-header>
@@ -78,20 +125,21 @@
   
         <div class="header-actions">
   
-          <button class="header-action-btn" aria-label="user">
-            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+          <button class="header-action-btn" aria-label="user" onclick="location.href='index2.html'">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
           </button>
-  
-          <button class="header-action-btn" aria-label="favourite item">
-            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+          
+          <button class="header-action-btn" aria-label="favourite item" onclick="location.href='wish.html'">
+            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
             <span class="btn-badge">0</span>
           </button>
-  
+          
           <a href="cart.html" class="header-action-btn" aria-label="cart item">
             <data class="btn-text" value="0">$0.00</data>
-            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
             <span class="btn-badge">0</span>
           </a>
+          
   
         </div>
   
@@ -132,7 +180,7 @@
 
       <div class="wrapper">
         <a href="#" class="logo">
-          <img src="./assets/images/Logo copy.png" width="179" height="26" alt="Glowing">
+          <img src="./assets/images/Logo copy.png" width="179" height="26" alt="Zendawa">
         </a>
 
         <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -257,6 +305,19 @@
       </section>
 
 
+      <!-- WhatsApp sticky button -->
+      <div class="sticky-button">
+        <div class="icon-bar">
+          <a href="https://wa.me/0742782395?text=Hello%20there!%20Welcome%20to%20Zendawa.%20How%20can%20we%20assist%20you%20today?%3F"
+            target="_blank" class="whatsapp-button">
+            <img src="assets/images/social.png" alt="WhatsApp" style="width: 50px; height: auto;">
+          </a>
+          <div class="hover-message">
+            <a href="https://wa.me/0742782395?text=Hello%20there!%20Welcome%20to%20Zendawa.%20How%20can%20we%20assist%20you%20today?%3F"
+              target="_blank">WhatsApp us</a>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -349,335 +410,7 @@
             </a>
           </div>
 
-          <ul class="has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/411.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <span class="badge" aria-label="20% off">-20%</span>
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <del class="del">Ksh. 3,000</del>
-
-                    <span class="span">ksh. 2,800</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Cicaplast</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/412.jpeg" width="540" height="720" loading="lazy"
-                    alt="Bio-shroom Rejuvenating Serum" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,900</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Ultra Micellar Water</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/413.jpeg" width="540" height="720" loading="lazy"
-                    alt="Coffee Bean Caffeine Eye Cream" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,800</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Niacinamide Serum</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/414.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,500</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Puryfying Foaming cleanser</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/416.jpeg" width="540" height="720" loading="lazy"
-                    alt="Coffee Bean Caffeine Eye Cream" class="img-cover">
-
-                  <span class="badge" aria-label="20% off">-20%</span>
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <del class="del">ksh.2,200</del>
-
-                    <span class="span">ksh. 2,000</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">Cera Ve Moisturizing Cream</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/417.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,600</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">Cera Ve Hydrating Facial cleanser</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
+          <ul class="has-scrollbar" id="products-container"></ul>
 
         </div>
       </section>
@@ -695,336 +428,7 @@
             </a>
           </div>
 
-          <ul class="has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/418.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <span class="badge" aria-label="20% off">-20%</span>
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <del class="del">ksh.3,700</del>
-
-                    <span class="span">ksh. 3,500</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">Cera Ve Renewing SA cleanser</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/419.jpeg" width="540" height="720" loading="lazy"
-                    alt="Bio-shroom Rejuvenating Serum" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,600</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">The Ordinary Sunscreen</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/420.jpeg" width="540" height="720" loading="lazy"
-                    alt="Coffee Bean Caffeine Eye Cream" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 1,500</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">Nivea Sunscreen</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/411.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,500</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Cicaplast</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/412.jpeg" width="540" height="720" loading="lazy"
-                    alt="Coffee Bean Caffeine Eye Cream" class="img-cover">
-
-                  <span class="badge" aria-label="20% off">-20%</span>
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <del class="del">Ksh. 3,000</del>
-
-                    <span class="span">Ksh. 2,800</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Ultra Micellar Water</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                  <img src="./assets/images/413.jpeg" width="540" height="720" loading="lazy"
-                    alt="Facial cleanser" class="img-cover">
-
-                  <div class="card-actions">
-
-                    <button class="action-btn" aria-label="add to cart">
-                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="add to whishlist">
-                      <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                    <button class="action-btn" aria-label="compare">
-                      <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                    </button>
-
-                  </div>
-                </div>
-
-                <div class="card-content">
-
-                  <div class="price">
-                    <span class="span">ksh. 2,500</span>
-                  </div>
-
-                  <h3>
-                    <a href="#" class="card-title">La Roche-Posay Niacinamide Serum</a>
-                  </h3>
-
-                  <div class="card-rating">
-
-                    <div class="rating-wrapper" aria-label="5 start rating">
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                      <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">5170 reviews</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+          <ul class="has-scrollbar" id="more-products-container"></ul>
         </div>
       </section>
 
@@ -1442,7 +846,9 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/script.js" defer>
+  </script>
+
 
   <!-- 
     - ionicon link

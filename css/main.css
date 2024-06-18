@@ -27,10 +27,7 @@ facebook button backgroun rgb(12, 12, 139, .8)
 
 body{
     height: 100vh;
-    background: linear-gradient(to top,
-rgb(17, 117, 231, 0.5),
-rgba(35, 136, 136)),
-url("./images/ZENDAWA1.png") center/cover no-repeat fixed;
+    background-image: url(".assets/images/400.jpeg");
 }
 
 button{

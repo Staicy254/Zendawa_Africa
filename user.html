@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Account</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .customer-details {
+            margin-bottom: 20px;
+        }
+        .customer-details h2 {
+            margin-top: 0;
+        }
+        .customer-details p {
+            margin-bottom: 5px;
+        }
+        .button {
+            background-color: #356E41;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .button:hover {
+            background-color: #3eca89;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="customer-details">
+            <h2>Customer Details</h2>
+            <?php
+                // Connect to your database
+                $servername = "localhost";
+                $username = "username";
+                $password = "password";
+                $dbname = "your_database";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Query to fetch customer details
+                $sql = "SELECT name, email, phone FROM customers WHERE id = 1"; // You might need to adjust the WHERE clause depending on how you identify the customer
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo "<p><strong>Name:</strong> " . $row["name"] . "</p>";
+                        echo "<p><strong>Email:</strong> " . $row["email"] . "</p>";
+                        echo "<p><strong>Phone:</strong> " . $row["phone"] . "</p>";
+                    }
+                } else {
+                    echo "No customer details found";
+                }
+                $conn->close();
+            ?>
+        </div>
+        <div>
+            <button class="button" id="logoutBtn">Logout</button>
+            <button class="button" id="deleteAccountBtn">Delete Account</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Redirect to index.html
+            window.location.href = "index.html";
+        });
+        document.getElementById("deleteAccountBtn").addEventListener("click", function() {
+            // Redirect to index.html
+            window.location.href = "index.html";
+        });
+    </script>
+    
+</body>
+</html>
