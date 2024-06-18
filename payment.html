@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .payment-option {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Payment Options</h1>
+
+  <div class="payment-option">
+    <label for="mpesa-phone">Enter your M-Pesa phone number:</label><br>
+    <input type="text" id="mpesa-phone" placeholder="e.g., 0712345678">
+    <button id="mpesa-button">Pay with M-Pesa</button>
+  </div>
+
+  <div class="payment-option">
+    <button id="paypal-button">Pay with PayPal</button>
+  </div>
+
+  <script>
+    document.getElementById('mpesa-button').addEventListener('click', function() {
+      const phoneNumber = document.getElementById('mpesa-phone').value;
+      if (phoneNumber) {
+        // Initiate M-Pesa payment process with the entered phone number
+        // For example, send the phone number to the backend to process the payment
+        fetch('/initiate-mpesa-payment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ phoneNumber: phoneNumber })
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert("M-Pesa payment processing: " + data.message);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert("Failed to initiate M-Pesa payment.");
+        });
+      } else {
+        alert("Please enter your M-Pesa phone number.");
+      }
+    });
+
+    document.getElementById('paypal-button').addEventListener('click', function() {
+      // Redirect to PayPal payment gateway or initiate PayPal payment process
+      // Example: window.location.href = "paypal_payment_url";
+      alert("PayPal payment processing...");
+    });
+  </script>
+</body>
+</html>
