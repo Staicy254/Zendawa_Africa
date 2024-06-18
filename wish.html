@@ -21,15 +21,8 @@
     - google font link
   -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"rel="stylesheet"/>
 
     <!-- 
     - preload images
@@ -52,7 +45,7 @@
     />
 
     <!-- javascript -->
-    <script src="wish.js" async defer></script>
+    <script src="cart.js" async defer></script>
   </head>
 
   <body id="top">
@@ -151,18 +144,35 @@
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
 
-    <!-- 
-        - #HERO
-      -->
-    <div class="container">
-      <button id="clear-cart">Clear wish list</button>
-      <ul id="cart-items"></ul>
+<!-- javascript -->
+    <script src="wish.js" defer></script>
+    <title>Favorite Items</title>
+    <!-- Include your CSS and other head elements -->
+  </head>
+  <body>
+    <header>
+      <!-- Your header content -->
+    </header>
+    <main>
+      <section
+        class="section favorite"
+        id="favorite"
+        aria-label="favorite"
+      >
+        <div class="container">
+          <h2 class="h2 section-title">Your Favorite Items</h2>
+          <!-- Your favorite items content goes here -->
+          <div class="container">
+            <button id="clear-wishlist">Clear wishlist</button>
+            <ul id="wishlist-items"></ul>
 
-      <div id="totalPrice"></div>
-    </div>
-    
-
-    <!-- 
+            <div id="totalPrice"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- 
     - #FOOTER
   -->
 
@@ -340,5 +350,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+  </body>
+</html>
+
+    </footer>
+    <!-- Include your JS scripts -->
   </body>
 </html>

@@ -13,18 +13,22 @@ function loadCart() {
         return `
             <div class='cart-item'>
               <div class='row-img'>
-                <img class='rowimg' src='${image}'></img>
+                <img class='rowimg' src='${image}' style='width: 100px; height: auto;'></img>
               </div>
               <p style='font-size:12px;'>${title}</p>
-              <h2 style='font-size: 15px;'>Ksh. ${price.discounted}.00</h2>
+              <h2 style='font-size: 15px;'>${price.discounted}</h2>
               <button id='remove-btn' data-id="${id}">Remove</button>
             </div>
           `;
       })
       .join('');
-    // document.getElementById(
-    //   'totalPrice'
-    // ).innerHTML = `<h2>Total: Ksh. ${total}.00</h2>`;
+  }
+
+  // Update total price only if there are items in the cart
+  if (cart.length > 0) {
+    document.getElementById('totalPrice').innerHTML = `<h2>Total: ${total} </h2>`;
+  } else {
+    document.getElementById('totalPrice').innerHTML = ''; // or any default message you want to display
   }
 }
 
