@@ -35,7 +35,7 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg">
 
   <!-- javascript -->
-   <script src="products.js" defer async></script>
+  <script src="products.js" defer async></script>
 
   <!-- WhatsApp sticky button styles -->
   <style>
@@ -45,20 +45,24 @@
       right: 20px;
       z-index: 999;
     }
+
     .whatsapp-button {
-          padding: 3px 3px;
-          background-color: #25D366; /* WhatsApp green color */
-          color: white;
-          border: none;
-          border-radius: 9px;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-      }
+      padding: 3px 3px;
+      background-color: #25D366;
+      /* WhatsApp green color */
+      color: white;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
     .whatsapp-button:hover {
       background-color: #25D366;
     }
+
     .hover-message {
       display: none;
       position: absolute;
@@ -71,15 +75,18 @@
       font-size: 14px;
       white-space: nowrap;
     }
+
     .icon-bar {
       display: flex;
       align-items: center;
       position: relative;
     }
+
     .hover-message a {
-            color: #fff;
-            text-decoration: none;
-        }
+      color: #fff;
+      text-decoration: none;
+    }
+
     .icon-bar:hover .hover-message,
     .icon-bar .hover-message:hover {
       display: block;
@@ -100,49 +107,49 @@
         <p class="alert-text">Shop with us for the best deals in the market</p>
       </div>
     </div>
-  
-  
+
+
 
     <div class="header-top" data-header>
       <div class="container">
-  
+
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="line line-1"></span>
           <span class="line line-2"></span>
           <span class="line line-3"></span>
         </button>
-  
+
         <div class="input-wrapper">
           <input type="search" name="search" placeholder="Search product" class="search-field">
           <button class="search-submit" aria-label="search">
             <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
-  
+
         <a href="#" class="logo">
           <img src="./assets/images/Logo copy.png" width="179" height="26" alt="Zendawa">
         </a>
-  
+
         <div class="header-actions">
-  
+
           <button class="header-action-btn" aria-label="user" onclick="location.href='user.html'">
             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
           </button>
-          
+
           <button class="header-action-btn" aria-label="favourite item" onclick="location.href='wish.html'">
             <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
             <span class="btn-badge">0</span>
           </button>
-          
+
           <a href="cart.html" class="header-action-btn" aria-label="cart item">
             <data class="btn-text" value="0">$0.00</data>
             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
             <span class="btn-badge">0</span>
           </a>
-          
-  
+
+
         </div>
-  
+
         <nav class="navbar">
           <ul class="navbar-list">
             <li>
@@ -162,11 +169,11 @@
             </li>
           </ul>
         </nav>
-  
+
       </div>
     </div>
   </header>
-  
+
 
 
 
@@ -195,11 +202,11 @@
         </li>
 
         <li>
-          <a href="#collection" class="navbar-link" data-nav-link>Collection</a>
+          <a href="wish.html" class="navbar-link" data-nav-link>Collection</a>
         </li>
 
         <li>
-          <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+          <a href="cart.html" class="navbar-link" data-nav-link>Shop</a>
         </li>
 
         <li>
@@ -301,7 +308,7 @@
           </ul>
 
         </div>
-      
+
       </section>
 
 
@@ -410,9 +417,9 @@
             </a>
           </div> -->
 
-          <ul class="has-scrollbar" id="products-container"></ul>
+            <ul class="has-scrollbar" id="products-container"></ul>
 
-        </div>
+          </div>
       </section>
 
       <section class="section shop" id="shop" aria-label="shop" data-section>
@@ -578,16 +585,16 @@
               The best sunscreen in the market.
             </p>
 
-            <div class="countdown">
+            <!-- <div class="countdown">
 
               <span class="time" aria-label="days">15</span>
               <span class="time" aria-label="hours">21</span>
               <span class="time" aria-label="minutes">46</span>
               <span class="time" aria-label="seconds">08</span>
 
-            </div>
+            </div> -->
 
-            <a href="#" class="btn btn-primary">Get Only ksh.2,500</a>
+            <a href="cart.html" class="btn btn-primary">Get Only ksh.2,500</a>
 
           </div>
 
@@ -660,7 +667,8 @@
                 </figure>
 
                 <h3 class="h3">
-                  <a href="https://api.whatsapp.com/send/?phone=0742782395&text=Hello+there%21+Welcome+to+Zendawa.+How+can+we+assist+you+today%3F%3F&type=phone_number&app_absent=0" class="card-title">Connect with us</a>
+                  <a href="https://api.whatsapp.com/send/?phone=0742782395&text=Hello+there%21+Welcome+to+Zendawa.+How+can+we+assist+you+today%3F%3F&type=phone_number&app_absent=0"
+                    class="card-title">Connect with us</a>
                 </h3>
 
                 <a href="#" class="btn-link">
