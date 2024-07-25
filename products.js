@@ -5,12 +5,12 @@ const moreProductsContainer = document.querySelector(
   '#more-products-container'
 );
 let addToCartBtns;
-let wishListBtns;
+// let wishListBtns;
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded');
   addToCartBtns = document.querySelectorAll('#addToCartBtn');
-  wishListBtns = document.querySelectorAll('#addToWishlistBtn');
+  // wishListBtns = document.querySelectorAll('#addToWishlistBtn');
 
   addToCartBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  wishListBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const productId = btn.parentElement.parentElement.id;
-      addToWishlist(productId);
-    });
-  });
+  // wishListBtns.forEach((btn) => {
+  //   btn.addEventListener('click', () => {
+  //     const productId = btn.parentElement.parentElement.id;
+  //     addToWishlist(productId);
+  //   });
+  // });
 });
 
 const products = [
@@ -168,20 +168,20 @@ function addToCart(productId) {
   alert('Product added to cart');
 }
 
-function addToWishlist(productId) {
-  const product = [...products, ...moreProducts].find(
-    (product) => product.id === productId
-  );
-  const wishlist = JSON.parse(
-    localStorage.getItem('wishlist') || '[]'
-  );
-  wishlist.push(product);
-  localStorage.setItem(
-    'wishlist',
-    JSON.stringify(wishlist)
-  );
-  alert('Product added to wishlist');
-}
+// function addToWishlist(productId) {
+//   const product = [...products, ...moreProducts].find(
+//     (product) => product.id === productId
+//   );
+//   const wishlist = JSON.parse(
+//     localStorage.getItem('wishlist') || '[]'
+//   );
+//   wishlist.push(product);
+//   localStorage.setItem(
+//     'wishlist',
+//     JSON.stringify(wishlist)
+//   );
+//   alert('Product added to wishlist');
+// }
 
 function renderProducts(products) {
   return products
@@ -205,9 +205,7 @@ function renderProducts(products) {
                               <button class="action-btn" id="addToCartBtn" aria-label="add to cart">
                                   <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                               </button>
-                              <button class="action-btn" id="addToWishlistBtn" aria-label="add to wishlist">
-                                  <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                              </button>
+                              
                         </div>
                     </div>
                     <div class="card-content">

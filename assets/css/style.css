@@ -1410,3 +1410,16 @@ body {
   .offer .container { gap: 120px; }
 
 }
+
+.product-image {
+  width: 200px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover; /* Ensure the image covers the dimensions without distortion */
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}

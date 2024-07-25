@@ -120,11 +120,27 @@
         </button>
 
         <div class="input-wrapper">
-          <input type="search" name="search" placeholder="Search product" class="search-field">
-          <button class="search-submit" aria-label="search">
+          <input type="search" id="searchField" name="search" placeholder="Search product" class="search-field">
+          <button class="search-submit" id="searchButton" aria-label="search">
             <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
+      
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const searchButton = document.querySelector('.search-submit');
+            const searchField = document.querySelector('.search-field');
+      
+            searchButton.addEventListener('click', (event) => {
+              event.preventDefault();
+              const query = searchField.value.trim();
+              if (query) {
+                window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+              }
+            });
+          });
+        </script>
+        
 
         <a href="#" class="logo">
           <img src="./assets/images/Logo copy.png" width="179" height="26" alt="Zendawa">
@@ -132,14 +148,14 @@
 
         <div class="header-actions">
 
-          <button class="header-action-btn" aria-label="user" onclick="location.href='user.html'">
+          <button class="header-action-btn" aria-label="user" onclick="location.href='./php/index.html'">
             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
           </button>
 
-          <button class="header-action-btn" aria-label="favourite item" onclick="location.href='wish.html'">
+          <!-- <button class="header-action-btn" aria-label="favourite item" onclick="location.href='wish.html'">
             <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
             <span class="btn-badge">0</span>
-          </button>
+          </button> -->
 
           <a href="cart.html" class="header-action-btn" aria-label="cart item">
             <data class="btn-text" value="0">$0.00</data>
@@ -201,9 +217,9 @@
           <a href="#home" class="navbar-link" data-nav-link>Home</a>
         </li>
 
-        <li>
+        <!-- <li>
           <a href="wish.html" class="navbar-link" data-nav-link>Collection</a>
-        </li>
+        </li> -->
 
         <li>
           <a href="cart.html" class="navbar-link" data-nav-link>Shop</a>
